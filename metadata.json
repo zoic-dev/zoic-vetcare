@@ -1,0 +1,10 @@
+{
+  "name": "Zoic Vetcare",
+  "description": "Premium Botanical Veterinary Solutions. Specializing in Herbal Veterinary Products, PCD Pharma Franchise, and Third-Party Manufacturing.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}
