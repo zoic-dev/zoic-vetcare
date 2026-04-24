@@ -9,8 +9,8 @@ export const About = () => {
       <section className="max-w-7xl mx-auto px-6 mb-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div>
-            <SectionHeading 
-              subtitle="Our Philosophy" 
+            <SectionHeading
+              subtitle="Our Philosophy"
               title="A Legacy of Botanical Excellence"
             />
             <p className="text-forest/70 text-lg mb-8 leading-relaxed">
@@ -52,7 +52,7 @@ export const About = () => {
       </section>
 
       {/* History Timeline */}
-      <section className="bg-cream py-24 mb-32">
+      {/* <section className="bg-cream py-24 mb-32">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading centered subtitle="Timeline" title="Our Journey Through Nature" />
           <div className="relative mt-20">
@@ -60,9 +60,9 @@ export const About = () => {
             <div className="space-y-20">
               {[
                 { year: '1990', title: 'The Genesis', desc: 'Zoic group started with a small herbal manufacturing unit in Punjab.' },
-                { year: '2005', title: 'Veterinary Division', desc: 'Launched Zoic Vetcare to specifically address animal health needs.' },
-                { year: '2015', title: 'Expansion', desc: 'Established a state-of-the-art GMP certified facility in Mohali.' },
+                { year: '2014', title: 'Expansion', desc: 'Established a state-of-the-art GMP certified facility in Mohali.' },
                 { year: '2023', title: 'Digital Era', desc: 'Transformed into a digitally integrated pharma network with 1200+ partners.' },
+                { year: '2026', title: 'Veterinary Division', desc: 'Launched Zoic Vetcare to specifically address animal health needs.' },
               ].map((item, i) => (
                 <div key={i} className={`flex flex-col md:flex-row items-center gap-10 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                   <div className="flex-1 text-center md:text-right">
@@ -91,6 +91,95 @@ export const About = () => {
             </div>
           </div>
         </div>
+      </section> */}
+
+      <section className="bg-cream py-24 mb-32">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeading
+            centered
+            subtitle="Timeline"
+            title="Our Journey Through Nature"
+          />
+
+          <div className="relative mt-20">
+            {/* Center Line */}
+            <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-0.5 bg-sage/20 md:block"></div>
+
+            <div className="space-y-28 md:space-y-32">
+              {[
+                {
+                  year: "1990",
+                  title: "The Genesis",
+                  desc: "Zoic group started with a small herbal manufacturing unit in Punjab.",
+                },
+                {
+                  year: "2014",
+                  title: "Expansion",
+                  desc: "Established a state-of-the-art GMP certified facility in Mohali.",
+                },
+                {
+                  year: "2023",
+                  title: "Digital Era",
+                  desc: "Transformed into a digitally integrated pharma network with 1200+ partners.",
+                },
+                {
+                  year: "2026",
+                  title: "Veterinary Division",
+                  desc: "Launched Zoic Vetcare to specifically address animal health needs.",
+                },
+              ].map((item, i) => {
+                const isLeft = i % 2 === 0;
+
+                return (
+                  <div key={i} className="relative flex items-center justify-between">
+
+                    {/* LEFT */}
+                    <div
+                      className={`w-[calc(50%-3rem)] ${isLeft ? "text-right pr-6" : "opacity-0 pointer-events-none"
+                        }`}
+                    >
+                      <div className="max-w-md ml-auto space-y-2">
+                        <h4 className="text-4xl font-serif font-bold text-sage">
+                          {item.year}
+                        </h4>
+                        <h5 className="text-xl font-bold text-forest">
+                          {item.title}
+                        </h5>
+                        <p className="text-forest/60 text-sm leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* CENTER ICON */}
+                    <div className="absolute left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-white border-4 border-sage shadow-lg flex items-center justify-center z-10">
+                      <History size={20} className="text-sage" />
+                    </div>
+
+                    {/* RIGHT */}
+                    <div
+                      className={`w-[calc(50%-3rem)] ${!isLeft ? "text-left pl-6" : "opacity-0 pointer-events-none"
+                        }`}
+                    >
+                      <div className="max-w-md mr-auto space-y-2">
+                        <h4 className="text-4xl font-serif font-bold text-sage">
+                          {item.year}
+                        </h4>
+                        <h5 className="text-xl font-bold text-forest">
+                          {item.title}
+                        </h5>
+                        <p className="text-forest/60 text-sm leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Testimony/Founder */}
@@ -103,8 +192,8 @@ export const About = () => {
             "At Zoic, we believe that the earth provides everything necessary for healing. Our role is simply to refine and deliver that botanical wisdom with scientific precision."
           </p>
           <div>
-            <h4 className="text-xl font-bold text-forest">Dr. G.P.S. Saini</h4>
-            <p className="text-xs uppercase tracking-widest font-bold text-sage-light">Chairman & Founder, Zoic Wellness</p>
+            <h4 className="text-xl font-bold text-forest">Mr. Vivek Singla</h4>
+            <p className="text-xs uppercase tracking-widest font-bold text-sage-light">Founder, Zoic Vetcare</p>
           </div>
         </div>
       </section>
